@@ -1,0 +1,191 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background: #2a9d8f;
+    height: 100vh;
+  }
+  
+  .calculator {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.5rem;
+    background: #023047;
+    height: 466px;
+    width: 220px;
+    padding: 10px;
+    border-radius: 20px;
+  }
+  
+  .history {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 10px 5px;
+    height: 100%;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgba(181, 180, 180, 0.614);
+    /* border: 1px solid white; */
+  }
+  
+  .history-item {
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+  }
+  
+  .history p {
+    margin: 0;
+  }
+  
+  #result {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0.2rem;
+    padding: 0 5px;
+    height: 100%;
+    text-align: right;
+    font-size: 20px;
+    font-weight: 500;
+    color: lightgray;
+    /* border: 1px solid white; */
+    background: #023047ac;
+    margin-bottom: 1rem;
+  }
+  
+  #result p {
+    margin: 0;
+  }
+  
+  .screen {
+    min-height: 50px;
+    font-size: 20px;
+    text-align: right;
+    width: 100%;
+    padding-right: 10px;
+    background: #cccccc;
+    color: black;
+    font-weight: 500;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+  }
+  
+  .screen::placeholder {
+    color: rgb(71, 71, 71);
+  }
+  
+  .screen:hover {
+    background: silver;
+    /* background: gray; */
+  }
+  
+  .screen:active {
+    background: gray;
+  }
+  
+  .button {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 100%;
+    /* border: 1px solid white; */
+  }
+  
+  .button button {
+    height: 45px;
+    width: 45px;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+  }
+  
+  button:hover {
+    /* background-color: #cccc; */
+    background-color: gray;
+  }
+  
+  button:active {
+    background-color: silver;
+  }
+  
+  #clear {
+    background: #96031a;
+    color: white;
+  }
+  
+  #clear:hover {
+    background: #960319b3;
+  }
+  
+  #allClear {
+    background: #8d0801;
+    color: white;
+  }
+  
+  #allClear:hover {
+    background: #8d0801c9;
+    color: white;
+  }
+  
+  #equal {
+    background: #f4d58d;
+  }
+  
+  #equal:hover {
+    background: #f4d58dc4;
+  }
+  
+  @media (min-width: 250px) and (max-width: 650px) {
+    .calculator {
+      height: 100vh;
+      width: 100vw;
+      border-radius: 0;
+      padding: 1rem;
+    }
+  
+    .history {
+      font-size: 35px;
+    }
+  
+    #result {
+      font-size: 40px;
+      padding: 0.5rem 1rem;
+    }
+  
+    .screen {
+      font-size: 40px;
+      padding: 2rem 1rem;
+    }
+  
+    .button {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      width: 100%;
+    }
+  
+    .button button {
+      aspect-ratio: 1 / 1; /* keeps buttons perfectly square */
+      width: 100%; /* fill the grid cell width */
+      border-radius: 50%;
+      font-size: 30px;
+      height: auto;
+    }
+  }
+  
